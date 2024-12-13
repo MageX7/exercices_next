@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.apparition {
+  animation: apparaitre 0.5s ease-in-out;
+}
+
+.disparition{
+  animation: disparaitre 0.5s forwards ease-in-out;
+}
+
+.onglet{
+  animation: fondu 0.7s ease-in-out;
+}
+
+@keyframes apparaitre {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes disparaitre {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes fondu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+.infobulle{
+  animation : deplacement 2s forwards ease-in-out
+}
+
+@keyframes deplacement {
+  
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
